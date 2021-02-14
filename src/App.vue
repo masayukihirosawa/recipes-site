@@ -1,28 +1,57 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="switch ">
+    <header>
+      <img @click="toHome" src="./assets/header.jpeg" alt="header img" />
+      <nav>
+        <router-link to="/home/default" active-class="headerActive" exact class="headerNav"
+          >Home</router-link
+        >
+        <router-link
+          to="/about"
+          active-class="headerActive"
+          exact
+          class="headerNav"
+          >About</router-link
+        >
+        <router-link
+          to="/column"
+          active-class="headerActive"
+          exact
+          class="headerNav"
+          >Column</router-link
+        >
+      </nav>
+    </header>
+    <router-view> </router-view>
+    <router-view> </router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  methods: {
+    toHome() {
+      this.$router.push("/home/default");
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.switch {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 50px;
+}
+
+.headerNav {
+  text-decoration: none;
+  color: #529ecc;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 30px;
+}
+
+.headerActive {
+  border-bottom: 2px solid black;
 }
 </style>
