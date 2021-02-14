@@ -42,5 +42,9 @@ export default new Router({
         header: Header,
       },
     },
+    {
+      path: "/*",
+      redirect: "/home/index"
+    },
   ],
 });
