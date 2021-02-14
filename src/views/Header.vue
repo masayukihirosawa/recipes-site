@@ -27,6 +27,16 @@
   </header>
 </template>
 
+<script>
+export default {
+  methods: {
+    toHome() {
+      this.$router.push("/home/index");
+    },
+  },
+};
+</script>
+
 <style scoped>
 header {
   padding-top: 50px;
