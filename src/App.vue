@@ -2,7 +2,6 @@
   <div>
     <router-view name="header"></router-view>
     <router-view></router-view>
-    <router-view name="post"></router-view>
     <div class="space"></div>
   </div>
 </template>

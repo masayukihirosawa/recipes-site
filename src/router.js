@@ -11,8 +11,6 @@ const Post2 = () =>
   import(/* webpackChunkName: "Post2" */ "./views/Posts/Post2.vue");
 const Post3 = () =>
   import(/* webpackChunkName: "Post3" */ "./views/Posts/Post3.vue");
-const Index = () =>
-  import(/* webpackChunkName: "Index" */ "./views/Posts/Index.vue");
 const Header = () =>
   import(/* webpackChunkName: "Header" */ "./views/Header.vue");
 const Post = () => import(/* webpackChunkName: "Post" */ "./views/Post.vue");
@@ -29,11 +27,17 @@ export default new Router({
       components: {
         default: Home,
         header: Header,
-        post: Post,
       },
       props: true,
+    },
+    {
+      path: "/home/post",
+      components: {
+        default: Post,
+        header: Header,
+      },
+      // props: true,
       children: [
-        { path: "index", component: Index },
         { path: "post1", component: Post1 },
         { path: "post2", component: Post2 },
         { path: "post3", component: Post3 },
@@ -55,7 +59,7 @@ export default new Router({
     },
     {
       path: "/*",
-      redirect: "/home/index",
+      redirect: "/home",
     },
   ],
 });

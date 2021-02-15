@@ -3,9 +3,8 @@
     <img @click="toHome" src="../assets/header.jpeg" alt="header img" />
     <nav>
       <router-link
-        to="/home/index"
+        to="/home"
         active-class="headerActive"
-        exact
         class="headerNav"
         >Home</router-link
       >
