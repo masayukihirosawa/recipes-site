@@ -1,12 +1,13 @@
 <template>
   <div>
     <h2>レシピ一覧</h2>
-    <ul>
-      <li @click="toPost1">水菜のレシピ</li>
-      <li @click="toPost2">ほうれん草のレシピ</li>
-      <li @click="toPost3">菊菜のレシピ</li>
-    </ul>
-    <div class="space"></div>
+    <transition name="fade" appear>
+      <ul>
+        <li @click="toPost1">水菜のレシピ</li>
+        <li @click="toPost2">ほうれん草のレシピ</li>
+        <li @click="toPost3">菊菜のレシピ</li>
+      </ul>
+    </transition>
   </div>
 </template>
 
@@ -36,7 +37,12 @@ li {
   background-color: #529ecc;
 }
 
-.space {
-  height: 1000px;
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
 }
 </style>

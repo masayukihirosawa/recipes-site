@@ -1,25 +1,19 @@
 <template>
   <div>
     <router-view name="header"></router-view>
-    <transition name="fade" mode="out-in">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
+    <router-view name="post"></router-view>
+    <div class="space"></div>
   </div>
 </template>
 
 <style>
 * {
   text-align: center;
+  background-color: floralwhite;
 }
-</style>
 
-<style scoped>
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.1s;
+.space {
+  height: 500px;
 }
 </style>

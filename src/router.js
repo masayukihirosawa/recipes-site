@@ -1,13 +1,23 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-import Column from "./views/Column.vue";
-import Post1 from "./views/Posts/Post1.vue";
-import Post2 from "./views/Posts/Post2.vue";
-import Post3 from "./views/Posts/Post3.vue";
-import Index from "./views/Posts/Index.vue";
-import Header from "./views/Header.vue";
+
+const Home = () => import(/* webpackChunkName: "Home" */ "./views/Home.vue");
+const About = () => import(/* webpackChunkName: "About" */ "./views/About.vue");
+const Column = () =>
+  import(/* webpackChunkName: "Column" */ "./views/Column.vue");
+const Post1 = () =>
+  import(/* webpackChunkName: "Post1" */ "./views/Posts/Post1.vue");
+const Post2 = () =>
+  import(/* webpackChunkName: "Post2" */ "./views/Posts/Post2.vue");
+const Post3 = () =>
+  import(/* webpackChunkName: "Post3" */ "./views/Posts/Post3.vue");
+const Index = () =>
+  import(/* webpackChunkName: "Index" */ "./views/Posts/Index.vue");
+const Header = () =>
+  import(/* webpackChunkName: "Header" */ "./views/Header.vue");
+const Post = () => import(/* webpackChunkName: "Post" */ "./views/Post.vue");
+
+//↑遅延ローディング
 
 Vue.use(Router);
 
@@ -19,6 +29,7 @@ export default new Router({
       components: {
         default: Home,
         header: Header,
+        post: Post,
       },
       props: true,
       children: [
@@ -44,7 +55,7 @@ export default new Router({
     },
     {
       path: "/*",
-      redirect: "/home/index"
+      redirect: "/home/index",
     },
   ],
 });
