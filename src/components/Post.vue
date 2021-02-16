@@ -1,16 +1,15 @@
 <template>
   <div>
-    <p>{{ number }}</p>
-    <p>post</p>
+    <Post1></Post1>
   </div>
 </template>
 
 <script>
+import Post1 from "./Posts/Post1.vue";
+
 export default {
-  data() {
-    return {
-      number: 5,
-    };
+  components: {
+    Post1,
   },
 };
 </script>

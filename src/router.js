@@ -1,19 +1,19 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const Home = () => import(/* webpackChunkName: "Home" */ "./views/Home.vue");
-const About = () => import(/* webpackChunkName: "About" */ "./views/About.vue");
+const Home = () => import(/* webpackChunkName: "Home" */ "./components/Home.vue");
+const About = () => import(/* webpackChunkName: "About" */ "./components/About.vue");
 const Column = () =>
-  import(/* webpackChunkName: "Column" */ "./views/Column.vue");
+  import(/* webpackChunkName: "Column" */ "./components/Column.vue");
 const Post1 = () =>
-  import(/* webpackChunkName: "Post1" */ "./views/Posts/Post1.vue");
+  import(/* webpackChunkName: "Post1" */ "./components/Posts/Post1.vue");
 const Post2 = () =>
-  import(/* webpackChunkName: "Post2" */ "./views/Posts/Post2.vue");
+  import(/* webpackChunkName: "Post2" */ "./components/Posts/Post2.vue");
 const Post3 = () =>
-  import(/* webpackChunkName: "Post3" */ "./views/Posts/Post3.vue");
+  import(/* webpackChunkName: "Post3" */ "./components/Posts/Post3.vue");
 const Header = () =>
-  import(/* webpackChunkName: "Header" */ "./views/Header.vue");
-const Post = () => import(/* webpackChunkName: "Post" */ "./views/Post.vue");
+  import(/* webpackChunkName: "Header" */ "./components/Header.vue");
+const Post = () => import(/* webpackChunkName: "Post" */ "./components/Post.vue");
 
 //↑遅延ローディング
 
