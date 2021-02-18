@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  props: ["id"],
+  // props: ["id"],
   methods: {
     toPost1() {
       this.$router.push("home/post");
