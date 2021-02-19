@@ -30,10 +30,14 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  padding-inline-start: 0px;
+}
+
 li {
   list-style: none;
   display: inline-block;
-  width: 20%;
+  width: 25%;
   padding: 55px 0;
   margin: 20px;
   background-color: #529ecc;
