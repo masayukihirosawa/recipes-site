@@ -33,20 +33,6 @@
   </div>
 </template>
 
-// <script>
-// import Post1 from "./Posts/Post1.vue";
-// import Post2 from "./Posts/Post2.vue";
-// import Post3 from "./Posts/Post3.vue";
-
-// export default {
-//   components: {
-//     Post1,
-//     Post2,
-//     Post3,
-//   },
-// };
-// </script>
-
 <style>
 .photo {
   width: 500px;
