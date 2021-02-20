@@ -1,8 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const Home = () => import(/* webpackChunkName: "Home" */ "./components/Home.vue");
-const About = () => import(/* webpackChunkName: "About" */ "./components/About.vue");
+const Home = () =>
+  import(/* webpackChunkName: "Home" */ "./components/Home.vue");
+const About = () =>
+  import(/* webpackChunkName: "About" */ "./components/About.vue");
 const Column = () =>
   import(/* webpackChunkName: "Column" */ "./components/Column.vue");
 const Post1 = () =>
@@ -13,7 +15,8 @@ const Post3 = () =>
   import(/* webpackChunkName: "Post3" */ "./components/Posts/Post3.vue");
 const Header = () =>
   import(/* webpackChunkName: "Header" */ "./components/Header.vue");
-const Post = () => import(/* webpackChunkName: "Post" */ "./components/Post.vue");
+const Post = () =>
+  import(/* webpackChunkName: "Post" */ "./components/Post.vue");
 
 //↑遅延ローディング
 
