@@ -1,13 +1,7 @@
 <template>
   <div>
     <slot name="title" :contents="contents"></slot>
-    <transition name="fade" appear>
-      <img
-        src="../../assets/Post/Post1-1.jpeg"
-        alt="料理の写真"
-        class="photo"
-      />
-    </transition>
+    <img src="../../assets/Post/Post1-1.jpeg" alt="料理の写真" class="photo" />
     <slot name="recipe"></slot>
     <!-- ↓レシピを書いてね。 -->
     <p>1)ほうれん草を3cm幅に切ります。</p>
