@@ -8,22 +8,20 @@
         <li @click="toPost3">菊菜のレシピ</li>
       </ul>
     </transition>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  // props: ["id"],
   methods: {
     toPost1() {
-      this.$router.push("home/post");
+      this.$router.push("home/post/1");
     },
     toPost2() {
-      this.$router.push("home/post");
+      this.$router.push("home/post/2");
     },
     toPost3() {
-      this.$router.push("home/post");
+      this.$router.push("home/post/3");
     },
   },
 };

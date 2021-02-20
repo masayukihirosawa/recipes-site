@@ -28,7 +28,6 @@ export default new Router({
         default: Home,
         header: Header,
       },
-      props: true,
     },
     {
       path: "/home/post",
@@ -36,11 +35,10 @@ export default new Router({
         default: Post,
         header: Header,
       },
-      // props: true,
       children: [
-        { path: "post1", component: Post1 },
-        { path: "post2", component: Post2 },
-        { path: "post3", component: Post3 },
+        { path: "1", component: Post1 },
+        { path: "2", component: Post2 },
+        { path: "3", component: Post3 },
       ],
     },
     {
