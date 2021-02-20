@@ -26,7 +26,7 @@ export default {
       // ↓レシピ名と投稿日を書いてね。
       contents: {
         title: "水菜のサラダ",
-        postedData: "2021/2/19",
+        data: "2021/2/19",
       },
     };
   },

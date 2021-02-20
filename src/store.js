@@ -5,6 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    count: 2,
+    Post1: {
+      title: "水菜のサラダ",
+      date: "2021/2/19",
+    },
   },
 });

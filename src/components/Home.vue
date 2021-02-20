@@ -2,7 +2,7 @@
   <div>
     <h2>レシピ一覧</h2>
     <ul>
-      <li @click="toPost1">sss</li>
+      <li @click="toPost1">{{ title }}</li>
       <li @click="toPost2">ほうれん草のレシピ</li>
       <li @click="toPost3">菊菜のレシピ</li>
     </ul>
@@ -11,6 +11,11 @@
 
 <script>
 export default {
+  computed: {
+    title() {
+      return this.$store.state.Post1.title;
+    },
+  },
   methods: {
     toPost1() {
       this.$router.push("home/post/1");
