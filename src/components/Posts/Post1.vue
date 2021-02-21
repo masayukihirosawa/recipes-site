@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot name="title" :contents="contents"></slot>
-    <img src="../../assets/Post/Post1-1.jpeg" alt="料理の写真" class="photo" />
+    <img src="@/assets/Post/Post1-1.jpeg" alt="料理の写真" class="photo" />
     <slot name="recipe"></slot>
     <!-- ↓レシピを書いてね。 -->
     <p>1)水菜を3cm幅に切ります。</p>
