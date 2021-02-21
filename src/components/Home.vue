@@ -3,7 +3,7 @@
     <h2>レシピ一覧</h2>
     <ul>
       <li @click="toPost1">{{ contents.Post1.title }}</li>
-      <img :src="contents.Post1.img" alt="料理の写真" class="photo" />
+      <!-- <img :src="contents.Post1.img" alt="料理の写真" class="photo" /> -->
       <li @click="toPost2">ほうれん草のレシピ</li>
       <li @click="toPost3">菊菜のレシピ</li>
     </ul>
