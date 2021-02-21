@@ -14,11 +14,6 @@ import { postOption } from "@/postOption";
 
 export default {
   mixins: [postOption],
-  computed: {
-    title() {
-      return this.$store.state.Post1.title;
-    },
-  },
   methods: {
     toPost1() {
       this.$router.push("home/post/1");
