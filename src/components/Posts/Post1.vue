@@ -20,15 +20,18 @@
 </template>
 
 <script>
+import { postOption } from "@/postOption";
+
 export default {
-  data() {
-    return {
-      // ↓レシピ名と投稿日を書いてね。
-      contents: {
-        title: "水菜のサラダ",
-        data: "2021/2/19",
-      },
-    };
-  },
+  mixins: [postOption],
+  // data() {
+  //   return {
+  //     // ↓レシピ名と投稿日を書いてね。
+  //     contents: {
+  //       title: "水菜のサラダ",
+  //       data: "2021/2/19",
+  //     },
+  //   };
+  // },
 };
 </script>

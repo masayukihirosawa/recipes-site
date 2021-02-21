@@ -2,7 +2,7 @@
   <div>
     <h2>レシピ一覧</h2>
     <ul>
-      <li @click="toPost1">{{ title }}</li>
+      <li @click="toPost1">{{ contents.Post1.title }}</li>
       <li @click="toPost2">ほうれん草のレシピ</li>
       <li @click="toPost3">菊菜のレシピ</li>
     </ul>
@@ -10,7 +10,10 @@
 </template>
 
 <script>
+import { postOption } from "@/postOption";
+
 export default {
+  mixins: [postOption],
   computed: {
     title() {
       return this.$store.state.Post1.title;
