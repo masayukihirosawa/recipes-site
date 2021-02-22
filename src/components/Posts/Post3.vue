@@ -1,7 +1,9 @@
 <template>
   <div>
-    <slot name="title" :contents="contents"></slot>
-    <img src="../../assets/Post/Post1-1.jpeg" alt="料理の写真" class="photo" />
+    <!-- <slot name="title" :contents="contents"></slot> -->
+    <h2>{{ contents.Post3.title }}</h2>
+    <p>{{ contents.Post3.date }}</p>
+    <img :src="contents.Post3.img" alt="料理の写真" class="photo" />
     <slot name="recipe"></slot>
     <!-- ↓レシピを書いてね。 -->
     <p>1)菊菜を3cm幅に切ります。</p>
@@ -20,15 +22,9 @@
 </template>
 
 <script>
+import { postOption } from "@/postOption";
+
 export default {
-  data() {
-    return {
-      // ↓レシピ名と投稿日を書いてね。
-      contents: {
-        title: "菊菜のサラダ",
-        postedData: "2021/2/20",
-      },
-    };
-  },
+  mixins: [postOption],
 };
 </script>

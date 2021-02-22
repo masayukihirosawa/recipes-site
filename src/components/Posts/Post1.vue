@@ -1,6 +1,9 @@
 <template>
   <div>
-    <slot name="title" :contents="contents"></slot>
+    <!-- <slot name="title" :contents="contents"></slot> -->
+    <h2>{{ contents.Post1.title }}</h2>
+    <p>{{ contents.Post1.date }}</p>
+    <img :src="contents.Post1.img" alt="料理の写真" class="photo" />
     <slot name="recipe"></slot>
     <!-- ↓レシピを書いてね。 -->
     <p>1)水菜を3cm幅に切ります。</p>

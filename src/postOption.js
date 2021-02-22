@@ -7,6 +7,16 @@ export const postOption = {
           date: "2021/2/19",
           img: require("@/assets/Post/Post1-1.jpeg"),
         },
+        Post2: {
+          title: "ほうれん草のサラダ",
+          date: "2021/2/19",
+          img: require("@/assets/Post/Post1-1.jpeg"),
+        },
+        Post3: {
+          title: "菊菜のサラダ",
+          date: "2021/2/19",
+          img: require("@/assets/Post/Post1-1.jpeg"),
+        },
       },
     };
   },
