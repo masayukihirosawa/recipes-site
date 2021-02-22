@@ -2,10 +2,17 @@
   <div>
     <h2>レシピ一覧</h2>
     <ul>
-      <li @click="toPost1">{{ contents.Post1.title }}</li>
+      <div v-for="(content, key) in contents" :key="key">
+        <template>
+          <li>{{ content.title }}</li>
+          <li>{{ content.date }}</li>
+          <img :src="content.img" alt="料理の写真" class="photo" />
+        </template>
+      </div>
+      <!-- <li @click="toPost1">{{ contents.Post1.title }}</li> -->
       <!-- <img :src="contents.Post1.img" alt="料理の写真" class="photo" /> -->
-      <li @click="toPost2">ほうれん草のレシピ</li>
-      <li @click="toPost3">菊菜のレシピ</li>
+      <!-- <li @click="toPost2">ほうれん草のレシピ</li>
+      <li @click="toPost3">菊菜のレシピ</li> -->
     </ul>
   </div>
 </template>
@@ -37,8 +44,6 @@ ul {
 li {
   list-style: none;
   display: inline-block;
-  width: 25%;
-  padding: 55px 0;
   margin: 20px;
   background-color: #529ecc;
 }
