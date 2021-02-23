@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>レシピ一覧</h2>
-    <ul @click="toPost1">
+    <ul @click="toPost1" >
       <li>{{ contents.Post1.title }}</li>
       <li>{{ contents.Post1.date }}</li>
       <img :src="contents.Post1.img" alt="料理の写真" class="photo" />
@@ -41,15 +41,15 @@ export default {
 <style scoped>
 ul {
   padding-inline-start: 0px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px;
 }
 
 li {
   list-style: none;
-  display: inline-block;
-  margin: 20px;
-  background-color: #529ecc;
 }
 .photo {
-  width: 200px;
+  width: 250px;
 }
 </style>
