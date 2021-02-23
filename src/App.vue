@@ -1,9 +1,9 @@
 <template>
   <div class="box">
     <router-view name="header"></router-view>
-    <transition name="fade" mode="out-in">
+    <!-- <transition name="fade" mode="out-in"> -->
       <router-view></router-view>
-    </transition>
+    <!-- </transition> -->
     <div class="space"></div>
   </div>
 </template>
@@ -20,15 +20,15 @@
 }
 
 .space {
-  height: 500px;
+  height: 1000px;
 }
 
-.fade-enter,
+/* .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.1s;
-}
+} */
 </style>
