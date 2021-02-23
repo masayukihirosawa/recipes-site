@@ -16,6 +16,21 @@
       <li>{{ contents.Post3.date }}</li>
       <img :src="contents.Post3.img" alt="料理の写真" class="photo" />
     </ul>
+    <ul @click="toPost4" >
+      <li>{{ contents.Post4.title }}</li>
+      <li>{{ contents.Post4.date }}</li>
+      <img :src="contents.Post4.img" alt="料理の写真" class="photo" />
+    </ul>
+    <ul @click="toPost5">
+      <li>{{ contents.Post5.title }}</li>
+      <li>{{ contents.Post5.date }}</li>
+      <img :src="contents.Post5.img" alt="料理の写真" class="photo" />
+    </ul>
+    <ul @click="toPost6">
+      <li>{{ contents.Post6.title }}</li>
+      <li>{{ contents.Post6.date }}</li>
+      <img :src="contents.Post6.img" alt="料理の写真" class="photo" />
+    </ul>
   </div>
 </template>
 
@@ -33,6 +48,15 @@ export default {
     },
     toPost3() {
       this.$router.push("home/post/3");
+    },
+    toPost4() {
+      this.$router.push("home/post/4");
+    },
+    toPost5() {
+      this.$router.push("home/post/5");
+    },
+    toPost6() {
+      this.$router.push("home/post/6");
     },
   },
 };

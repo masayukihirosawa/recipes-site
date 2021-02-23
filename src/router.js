@@ -13,6 +13,12 @@ const Post2 = () =>
   import(/* webpackChunkName: "Post2" */ "./components/Posts/Post2.vue");
 const Post3 = () =>
   import(/* webpackChunkName: "Post3" */ "./components/Posts/Post3.vue");
+const Post4 = () =>
+  import(/* webpackChunkName: "Post1" */ "./components/Posts/Post4.vue");
+const Post5 = () =>
+  import(/* webpackChunkName: "Post2" */ "./components/Posts/Post5.vue");
+const Post6 = () =>
+  import(/* webpackChunkName: "Post3" */ "./components/Posts/Post6.vue");
 const Header = () =>
   import(/* webpackChunkName: "Header" */ "./components/Header.vue");
 const Post = () =>
@@ -42,6 +48,9 @@ export default new Router({
         { path: "1", component: Post1 },
         { path: "2", component: Post2 },
         { path: "3", component: Post3 },
+        { path: "4", component: Post4 },
+        { path: "5", component: Post5 },
+        { path: "6", component: Post6 },
       ],
     },
     {
@@ -66,8 +75,6 @@ export default new Router({
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
-    } else {
-      return { x: 0, y: 0 };
     }
   },
 });
