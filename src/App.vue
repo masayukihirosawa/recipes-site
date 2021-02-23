@@ -19,9 +19,9 @@
   margin: 0 auto;
 }
 
-.space {
+/* .space {
   height: 1000px;
-}
+} */
 
 /* .fade-enter,
 .fade-leave-to {
