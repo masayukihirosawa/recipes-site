@@ -1,11 +1,13 @@
 <template>
   <header>
-    <img @click="toHome" src="../assets/header.jpeg" alt="header img" />
+    <img
+      @click="toHome"
+      src="../assets/header.jpeg"
+      alt="header img"
+      class="photo"
+    />
     <nav>
-      <router-link
-        to="/home"
-        active-class="headerActive"
-        class="headerNav"
+      <router-link to="/home" active-class="headerActive" class="headerNav"
         >Home</router-link
       >
       <router-link
@@ -51,5 +53,21 @@ header {
 
 .headerActive {
   border-bottom: 2px solid black;
+}
+
+@media (max-width: 1000px) {
+  .photo {
+    width: 60%;
+  }
+
+  header {
+    padding-top: 25px;
+  }
+
+  .headerNav {
+    padding: 5px;
+    margin: 10px 5px;
+    width: 25%;
+  }
 }
 </style>

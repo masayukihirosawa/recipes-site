@@ -1,32 +1,32 @@
 <template>
   <div>
     <h2>レシピ一覧</h2>
-    <ul @click="toPost1" >
+    <ul @click="toPost1" class="title">
       <li>{{ contents.Post1.title }}</li>
       <li>{{ contents.Post1.date }}</li>
       <img :src="contents.Post1.img" alt="料理の写真" class="photo" />
     </ul>
-    <ul @click="toPost2">
+    <ul @click="toPost2" class="title">
       <li>{{ contents.Post2.title }}</li>
       <li>{{ contents.Post2.date }}</li>
       <img :src="contents.Post2.img" alt="料理の写真" class="photo" />
     </ul>
-    <ul @click="toPost3">
+    <ul @click="toPost3" class="title">
       <li>{{ contents.Post3.title }}</li>
       <li>{{ contents.Post3.date }}</li>
       <img :src="contents.Post3.img" alt="料理の写真" class="photo" />
     </ul>
-    <ul @click="toPost4" >
+    <ul @click="toPost4" class="title">
       <li>{{ contents.Post4.title }}</li>
       <li>{{ contents.Post4.date }}</li>
       <img :src="contents.Post4.img" alt="料理の写真" class="photo" />
     </ul>
-    <ul @click="toPost5">
+    <ul @click="toPost5" class="title">
       <li>{{ contents.Post5.title }}</li>
       <li>{{ contents.Post5.date }}</li>
       <img :src="contents.Post5.img" alt="料理の写真" class="photo" />
     </ul>
-    <ul @click="toPost6">
+    <ul @click="toPost6" class="title">
       <li>{{ contents.Post6.title }}</li>
       <li>{{ contents.Post6.date }}</li>
       <img :src="contents.Post6.img" alt="料理の写真" class="photo" />
@@ -67,13 +67,29 @@ ul {
   padding-inline-start: 0px;
   cursor: pointer;
   display: inline-block;
-  margin: 20px;
+  margin: 15px;
 }
 
 li {
   list-style: none;
 }
 .photo {
-  width: 250px;
+  width: 100%;
+}
+.title {
+  width: 30%;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    width: 40%;
+    margin: 15px 25px;
+  }
+}
+
+@media (max-width: 670px) {
+  .title {
+    width: 60%;
+  }
 }
 </style>

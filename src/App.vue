@@ -2,33 +2,30 @@
   <div class="box">
     <router-view name="header"></router-view>
     <!-- <transition name="fade" mode="out-in"> -->
-      <router-view></router-view>
+    <router-view></router-view>
     <!-- </transition> -->
     <div class="space"></div>
   </div>
 </template>
 
-<style>
+<style scoped>
 * {
   text-align: center;
-  background-color: floralwhite;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.box {
-  width: 900px;
+/* .box {
   margin: 0 auto;
+} */
+
+@media (min-width: 1000px) {
+  .box {
+    width: 80%;
+  }
 }
 
 /* .space {
   height: 1000px;
-} */
-
-/* .fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.1s;
 } */
 </style>
