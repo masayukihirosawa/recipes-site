@@ -15,6 +15,12 @@
 
 <style>
 .photo {
-  width: 500px;
+  width: 50%;
+}
+
+@media (max-width: 670px) {
+  .photo {
+    width: 85%;
+  }
 }
 </style>
